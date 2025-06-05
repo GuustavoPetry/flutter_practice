@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utilidades/src/app/routes.dart';
 
 class AppWidgets extends StatelessWidget {
   const AppWidgets({super.key});
@@ -7,6 +8,8 @@ class AppWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "App Utilidades",
+      initialRoute: "/home",
+      routes: generateRoutes(),
     );
   }
 }
