@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:utilidades/src/models/about_model.dart';
 
@@ -12,19 +13,21 @@ class AboutController {
         "Meu objetivo é atuar como Desenvolvedor, afim de adquirir experiência prática,"
             "e contribuir com soluções eficientes e alinhadas às necessidades do usuário.",
 
-        " Meus conhecimentos na área incluem:"
+        " Meus conhecimentos na área incluem: "
             "Dart, Flutter, Python, Django, Node.js, JavaScript, React.js, HTML, CSS, MySQL, Git",
       ],
       socialLinks: [
         SocialLinks(
           name: "GitHub",
           icon: FontAwesomeIcons.github,
+          color: Colors.black,
           url: "https://github.com/guustavopetry",
         ),
 
         SocialLinks(
           name: "LinkedIn",
           icon: FontAwesomeIcons.linkedin,
+          color: Colors.indigo,
           url: "https://linkedin.com/in/ogustavopetry1999",
         ),
       ],

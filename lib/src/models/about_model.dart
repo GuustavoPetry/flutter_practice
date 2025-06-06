@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class AboutModel {
@@ -8,18 +9,20 @@ class AboutModel {
   AboutModel({
     required this.photoUrl,
     required this.aboutMe,
-    required this.socialLinks
+    required this.socialLinks,
   });
 }
 
 class SocialLinks {
   final String name;
   final IconData icon;
+  final Color color;
   final String url;
 
   SocialLinks({
     required this.name,
     required this.icon,
-    required this.url
+    required this.color,
+    required this.url,
   });
 }
