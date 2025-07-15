@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:utilidades/src/services/auth_service.dart';
 import 'package:utilidades/src/widgets/custom_app_bar.dart';
 import 'package:utilidades/src/widgets/custom_app_drawer.dart';
 
-class BaseLayout extends StatelessWidget {
+class BaseLayout extends StatefulWidget {
   final String title;
   final Widget body;
 
@@ -13,11 +14,23 @@ class BaseLayout extends StatelessWidget {
   });
 
   @override
+  State<BaseLayout> createState() => _BaseLayoutState();
+}
+
+class _BaseLayoutState extends State<BaseLayout> {
+
+  @override
+  void initState() {
+    super.initState();
+    AuthService().checkLogin(context);
+  }
+
+  @override
   Widget build (BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: title),
+      appBar: CustomAppBar(title: widget.title),
       drawer: CustomAppDrawer(),
-      body: body,
+      body: widget.body,
     );
   }
 }
