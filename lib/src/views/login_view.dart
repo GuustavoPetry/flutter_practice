@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:utilidades/src/controllers/login_controller.dart';
 import 'package:utilidades/src/models/user_model.dart';
-import 'package:utilidades/src/services/auth_service.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -16,24 +15,7 @@ class _LoginViewState extends State<LoginView> {
   final _controller = LoginController();
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
-  String _message = "";
   bool _isLoading = false;
-
-  // void _handleLogin() async {
-  //   final sucess = await _controller.login(
-  //     _usernameController.text,
-  //     _passwordController.text
-  //   );
-
-  //   if(sucess) {
-  //     AuthService.login();
-  //     Navigator.pushReplacementNamed(context, "/home");
-  //   } else {
-  //     setState(() {
-  //       _message = "Credenciais Inválidas";
-  //     });
-  //   }
-  // }
 
   void _handleLogin() async {
     setState(() {
@@ -103,7 +85,6 @@ class _LoginViewState extends State<LoginView> {
               child: _isLoading ? CircularProgressIndicator() : Text("Entrar"),
             ),
             SizedBox(height: 10),
-            Text(_message, style: TextStyle(color: Colors.red)),
           ],
         ),
       ),

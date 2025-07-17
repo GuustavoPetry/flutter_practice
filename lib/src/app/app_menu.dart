@@ -3,6 +3,7 @@ import 'package:utilidades/src/models/menu_model.dart';
 import 'package:utilidades/src/views/about_view.dart';
 import 'package:utilidades/src/views/converter_view.dart';
 import 'package:utilidades/src/views/home_view.dart';
+import 'package:utilidades/src/views/person_view.dart';
 import 'package:utilidades/src/views/products_list_view.dart';
 
 final List<MenuModel> appMenuItems = [
@@ -32,5 +33,12 @@ final List<MenuModel> appMenuItems = [
     icon: Icons.production_quantity_limits,
     route: "/produtos",
     page: ProductsListView(),
+  ),
+
+  MenuModel(
+    title: "Pessoas (SQLite)",
+    icon: Icons.person,
+    route: "/person",
+    page: PersonView(),
   ),
 ];

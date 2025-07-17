@@ -2,15 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
-  // static bool isLoggedIn = false;
-
-  // static void login() {
-  //   isLoggedIn = true;
-  // }
-
-  // static void logout() {
-  //   isLoggedIn = false;
-  // }
 
   Future<bool> checkLogin(context) async {
     final prefs = await SharedPreferences.getInstance();
