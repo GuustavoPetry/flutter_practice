@@ -7,18 +7,13 @@ class BaseLayout extends StatefulWidget {
   final String title;
   final Widget body;
 
-  const BaseLayout({
-    super.key,
-    required this.title,
-    required this.body
-  });
+  const BaseLayout({super.key, required this.title, required this.body});
 
   @override
   State<BaseLayout> createState() => _BaseLayoutState();
 }
 
 class _BaseLayoutState extends State<BaseLayout> {
-
   @override
   void initState() {
     super.initState();
@@ -26,7 +21,7 @@ class _BaseLayoutState extends State<BaseLayout> {
   }
 
   @override
-  Widget build (BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: widget.title),
       drawer: CustomAppDrawer(),

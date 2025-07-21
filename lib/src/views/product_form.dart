@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
-import 'package:flutter_multi_formatter/formatters/currency_input_formatter.dart';
 import 'package:utilidades/src/controllers/product_controller.dart';
 import 'package:utilidades/src/models/product_model.dart';
 
