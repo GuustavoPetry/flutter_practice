@@ -1,10 +1,10 @@
 // Autenticação e cadastro usando Firebase
-class UsuarioModel {
+class UsuarioFirebaseModel {
   final String uid; // equivalente ao "id"
   final String nome;
   final String email;
 
-  UsuarioModel({
+  UsuarioFirebaseModel({
     required this.uid,
     required this.nome,
     required this.email
@@ -18,8 +18,8 @@ class UsuarioModel {
     };
   }
 
-  factory UsuarioModel.fromMap(Map<String, dynamic> map) {
-    return UsuarioModel(
+  factory UsuarioFirebaseModel.fromMap(Map<String, dynamic> map) {
+    return UsuarioFirebaseModel(
       uid: map["uid"], 
       nome: map["nome"], 
       email: map["email"]
