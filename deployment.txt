@@ -1,0 +1,42 @@
+* Deploy passa a passo:
+    INSERIR ICONES INICIADORES:
+        1 -> utilizar o site www.appicon.co para gerar as imagens de ícones iniciadores
+
+        2 -> após criar as imagens, inserir as pastas geradas dentro do diretório android, 
+                no caminho => C:\projetos\flutter_practice\android\app\src\main\res
+
+        3 -> caso alterar o nome padrão das imagens deverá alterar também no arquivo 
+                => android\app\src\main\AndroidManifest.xml
+
+        4 -> após isso o app já deverá mostrar a imagem ao iniciar o aplicativo
+
+    * CRIAR ASSINATURA DO APP:
+        5 -> caso o keytool não estiver no path do sistema, inserir o seguinte caminho nas
+                variáveis de ambiente => C:\Program Files\Android\Android Studio\jbr\bin
+
+        6 -> acessar a raiz do projeto via powershell e executar este comando:
+                keytool -genkey -v -keystore $env:USERPROFILE\upload-keystore.jks `
+                -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 `
+                -alias upload
+
+        7 -> escolher uma senha segura e preencher as demais informações, após isso irá gerar um 
+                arquivo Keystore no caminho => C:\Users\ogust\upload-keystore.jks
+
+        8 -> Inserir a keystore.jks na pasta => C:\projetos\flutter_practice\android\app
+
+    * FAZER REFERÊNCIA AO KEYSTORE DO APP:
+        9 -> criar um arquivo com nome key.properties nessa pasta => C:\projetos\flutter_practice\android
+             e inserir o seguinte código:
+                storePassword=<password-from-previous-step>
+                keyPassword=<password-from-previous-step>
+                keyAlias=upload
+                storeFile=<keystore-file-location>
+
+                * Substituir as tags por suas credenciais
+                * Incluir key.proporties no .gitignore
+
+        10 -> inserir códigos no arquivo build.gradle.kts
+
+        11 -> executar o comando flutter clean
+
+        12 -> executar o comando pra gerar o apk => flutter build apk --release
