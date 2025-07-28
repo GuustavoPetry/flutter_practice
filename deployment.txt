@@ -40,3 +40,9 @@
         11 -> executar o comando flutter clean
 
         12 -> executar o comando pra gerar o apk => flutter build apk --release
+
+    * CRIAR CONTA DE DESENVOLVEDOR:
+        13 -> acessa o site => play.google.com/console para criar a conta de desenvolvedor
+
+    * PUBLICAR O APP NA PLAY STORE CORRETAMENTE:
+        14 -> siga a documentação => www.queroapp.com.br/artigo/como-publicar-seu-aplicativo-android-na-play-store

@@ -66,10 +66,10 @@ O arquivo será salvo em:
 Com o conteúdo:
 
     ```properties
-    storePassword=senha_do_keystore
-    keyPassword=senha_da_chave
+    storePassword=<senha_do_keystore>
+    keyPassword=<senha_da_chave>
     keyAlias=upload
-    storeFile=upload-keystore.jks
+    storeFile=<upload-keystore.jks>
     ```
 
 > **Importante:** Inclua `key.properties` no `.gitignore` para evitar versionamento.
@@ -138,7 +138,19 @@ O APK gerado estará em:
 
 ---
 
-## Dicas finais
+## 6. Criar Conta de Desenvolvedor
+
+13. Crie pelo site => (https://play.google.com/console)
+
+---
+
+## 7. Publicar o App na PlayStore Corretamente
+
+14. Siga a documentação => (https://www.queroapp.com.br/artigo/como-publicar-seu-aplicativo-android-na-play-store)
+
+---
+
+## Dicas finais 
 
 - Para publicar na Play Store, gere o App Bundle:
     ```bash
