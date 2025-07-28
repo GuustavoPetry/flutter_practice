@@ -7,6 +7,7 @@ import 'package:utilidades/src/views/alunos_view.dart';
 import 'package:utilidades/src/views/bloc_example_view.dart';
 import 'package:utilidades/src/views/converter_view.dart';
 import 'package:utilidades/src/views/counter_cubit_view.dart';
+import 'package:utilidades/src/views/firebase_messaging.dart';
 import 'package:utilidades/src/views/home_view.dart';
 import 'package:utilidades/src/views/login_river_view.dart';
 import 'package:utilidades/src/views/person_view.dart';
@@ -85,5 +86,12 @@ final List<MenuModel> appMenuItems = [
     icon: Icons.class_,
     route: "/alunos",
     page: AlunosView(),
+  ),
+
+  MenuModel(
+    title: "Firebase Messaging",
+    icon: Icons.message,
+    route: "/firebase-messaging",
+    page: FirebaseCloudMessaging(),
   ),
 ];

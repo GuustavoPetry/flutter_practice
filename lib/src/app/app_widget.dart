@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "App Utilidades",
-      initialRoute: "/login-firebase",
+      initialRoute: "/firebase-messaging",
       routes: {
         "/login": (context) => LoginView(),
         "/login-firebase": (context) => const LoginFirebaseView(),

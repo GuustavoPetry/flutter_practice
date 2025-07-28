@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:utilidades/src/app/app_widget.dart';
@@ -24,9 +25,20 @@ void main() async {
     }
   );
 
+  // Iniciar serviço background Firebase Messaging
+  FirebaseMessaging.onBackgroundMessage(_backgoundMessaging);
+
   runApp(const AppWidget());
 
+}
+
+// Future para notificações background
+Future<void> _backgoundMessaging(RemoteMessage message) async {}
+
+
   /* 
+                  ***FERRAMENTAS ESSENCIAIS***
+
     Riverpod - é um gerenciador de estado flexível e poderoso,
     desenvolvida por Remi Rousselet (criador do provider), e foi 
     criado para corrigir limitações do provider e oferecer uma abordagem
@@ -162,4 +174,3 @@ void main() async {
             - flutter pub add cloud_firestore
 
    */
-}
