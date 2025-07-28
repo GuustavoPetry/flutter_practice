@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utilidades/src/animations/splash_app.dart';
 import 'package:utilidades/src/app/routes.dart';
 import 'package:utilidades/src/views/login_firebase_view.dart';
 import 'package:utilidades/src/views/login_view.dart';
@@ -11,12 +12,13 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "App Utilidades",
-      initialRoute: "/firebase-messaging",
+      initialRoute: "/splash",
       routes: {
-        "/login": (context) => LoginView(),
+        "/login": (context) => const LoginView(),
         "/login-firebase": (context) => const LoginFirebaseView(),
         "/register-firebase": (context) => const RegisterFirebaseView(),
-        ...generateRoutes()
+        "/splash": (context) => const SplashApp(),
+        ...generateRoutes(),
       },
     );
   }
